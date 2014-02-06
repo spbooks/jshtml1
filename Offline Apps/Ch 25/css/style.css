@@ -1,0 +1,82 @@
+body{
+	font: 18px / 1.5 'Liberation Sans','Helvetia Neue',helvetica,arial,sans-serif;
+    margin:0;
+}
+body > *{
+    padding:1em 2em;
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+}
+header{
+    background:rgba(51,153,153,1);
+    color:#fff;
+    margin:0;
+    font-size: .8em;
+    position:relative
+}
+header a{
+    color:inherit;
+    font-size:.8em;
+    position:absolute;
+    top:1em;
+    right:1em;
+}
+h1{
+    margin:0;
+    font-size:1.2em
+}
+textarea{
+    font:inherit;
+    width: 100%;
+}
+
+button{
+    font:inherit;
+    background: rgba(51,153,153,1);
+    border:2px outset rgba(51,153,153,1);
+    color:#fff;
+}
+
+body{
+	font: 18px / 1.5 'Liberation Sans','Helvetia Neue',helvetica,arial,sans-serif;
+}
+
+input[type=text]{
+	font:inherit;
+	line-height: 1;
+	padding:.3em;
+	border: 1px solid #ccc;
+	display: block;
+	width: 100%;
+}
+
+input[type=date]{
+	font:inherit;
+	line-height:1;
+	border:0;
+	border-bottom: 1px solid #ccc;
+	text-align: right;
+}
+
+label[for="date"]{
+	font-size: .8em;
+}
+
+label{
+	font-weight: bold;
+}
+.note{
+	font-size:.8em;
+}
+
+.hidden{
+	display:none;
+}
+table{
+	width: 100%;
+}
+table,td,th{
+	border:1px solid #ccc;
+	border-collapse: collapse;
+}	

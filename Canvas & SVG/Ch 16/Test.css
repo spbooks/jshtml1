@@ -1,0 +1,12 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,.svg {
+        background: url(a hef="http://markitwrite.com/wp-content/uploads/2013/11/Img-exp.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+
+.container {
+	height:900px;
+	min-width:600px;
+}

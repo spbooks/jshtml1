@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <defs>
+     <filter id="f1" x="0" y="0" width="200%" height="200%">
+       <feOffset result="offOut"  dx="25" dy="20" />
+       <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+     </filter>
+   </defs>
+   <polygon points="220,10 300,210 170,250 123,234"
+     style="fill:blue;stroke:purple;stroke-width:3" filter="url(#f1)" />
+  </svg>
+</body>
+</html>

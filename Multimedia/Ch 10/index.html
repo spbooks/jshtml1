@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>&lt;track&gt;</title>
+    <link rel="stylesheet" href="cues.css" type="text/css">
+    <body>
+        <h1>The <code>track</code> element</h1>
+        <p>Play the video below to see an example of captions for video. Also take a look at the <a href="dialogue.vtt">WebVTT file</a>.</p>
+        <video controls preload="auto" autoplay>
+        	<source src="Sita_Sings_the_Blues_Excerpt.mp4" type="video/mp4">
+            <source src="Sita_Sings_the_Blues_Excerpt.webm" type="video/webm">
+            <source src="Sita_Sings_the_Blues_Excerpt.ogv" type="video/ogg">
+            <track kind="captions" srclang="en-US" src="dialogue.vtt">
+        </video>
+    <p> Note that you may need to place these files on a web server in order for this demo to work. If you do, ensure that your videos are being served with the proper <code>Content-type</code> value, and that dialogue.vtt is served with a <code>Content-type: text/vtt</code> header.</p>
+    </body>
+</html>

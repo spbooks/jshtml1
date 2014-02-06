@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>IndexedDB Journal</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+   <header>
+        <h1>JumpStart HTML5: Offline Applications - IndexedDB Journal</h1>
+        <nav><a href="../">Back to Chapter Listing</a></nav>
+    </header>
+
+        <form id="addnew">  
+            <p>
+            	<input type="hidden" name="key" id="key" value="">
+            	<label for="tags">How would you like to tag this entry?</label>
+               	<input type="text" name="tags" id="tags" value="" required>
+               	<span class="note">(Optional. Separate tags with a comma.)</span>
+            </p>
+            <p>
+            	<label for="entry">What happened today?</label> 
+            	(<label for="date">Today is:
+            		<input type="date" id="date" name="date" value="" required readonly>
+            	</label>)
+            	<textarea id="entry" name="entry" cols="30" rows="12" required></textarea>
+           		<button type="submit" id="submit">Save entry</button>
+           	</p>
+        </form>
+        
+         <section id="allentries" class="hidden">
+            <h1>View all entries</h1>
+        	<table>
+        		<thead>
+        			<tr>
+        				<th>Entry date</th>
+        				<th>Entry tags</th>
+        			</tr>
+        		</thead>
+        		<tbody>
+        		</tbody>
+         </section>
+        
+	<script type="application/javascript" src="js/IndexedDBShim.min.js"></script>
+	<script type="text/javascript" src="js/journal.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Primer - Example: Using canvas</title>
+    <script type="text/javascript"><!--
+window.addEventListener('load', function () {
+  // Get the canvas element.
+  var elem = document.getElementById('myCanvas');
+  if (!elem || !elem.getContext) {
+    return;
+  }
+
+  // Get the canvas 2d context.
+  var context = elem.getContext('2d');
+  if (!context) {
+    return;
+  }
+
+  // Now you are done! Let's draw a blue rectangle.
+  context.fillStyle = '#00f';
+  context.fillRect(0, 0, 150, 100);
+}, false);
+    // --></script>
+  </head>
+  <body>
+    <p><canvas id="myCanvas" width="200" height="150">Your browser does not have 
+    support for Canvas.  You should see:
+    <span style="display:block;width:150px;height:100px;background:#00f">&nbsp;</span></canvas></p> 
+  </body>
+</html>

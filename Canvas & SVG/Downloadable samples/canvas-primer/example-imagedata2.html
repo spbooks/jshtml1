@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Primer - Example: Using ImageData</title>
+    <script type="text/javascript"><!--
+window.addEventListener('load', function () {
+  // Get the canvas element.
+  var elem = document.getElementById('myCanvas');
+  if (!elem || !elem.getContext) {
+    return;
+  }
+
+  // Get the canvas 2d context.
+  var context = elem.getContext('2d');
+  if (!context || !context.putImageData) {
+    return;
+  }
+
+  var imgd = false,
+      w = 50, h = 50,
+      x = 0,  y = 0;
+
+  // Not all browsers implement createImageData. On such browsers we obtain the 
+  // ImageData object using the getImageData method. The worst-case scenario is 
+  // to create an object *similar* to the ImageData object and hope for the best 
+  // luck.
+  if (context.createImageData) {
+    imgd = context.createImageData(w, h);
+  } else if (context.getImageData) {
+    imgd = context.getImageData(0, 0, w, h);
+  } else {
+    imgd = {'width' : w, 'height' : h, 'data' : new Array(w*h*4)};
+  }
+  var pix = imgd.data;
+
+  // Loop over each pixel.
+  for (var i = 0, n = pix.length; i < n; i += 4) {
+    pix[i  ] = 255; // the red channel
+    pix[i+3] = 127; // the alpha channel
+  }
+
+  // Draw the ImageData object.
+  context.putImageData(imgd, x, y);
+}, false);
+    // --></script>
+  </head>
+  <body>
+    <p><canvas id="myCanvas" width="100" height="100">Your browser does not have 
+    support for Canvas.  You should see: <span 
+      style="display:block;width:50px;height:50px;background:#f77">&nbsp;</span></canvas></p>
+  </body>
+</html>

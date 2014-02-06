@@ -1,0 +1,14 @@
+[id=video_wrapper]{
+    width: 508px;
+    margin: 1em auto;
+    position:relative;
+}
+
+[id=video_wrapper] video{
+    width:inherit;
+    min-height:290px;
+    position:relative;
+    z-index:1;
+    display:block;
+    height:auto;
+}

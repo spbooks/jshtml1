@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Primer - Example: Drawing shadows</title>
+    <script type="text/javascript"><!--
+window.addEventListener('load', function () {
+  // Get the canvas element.
+  var elem = document.getElementById('myCanvas');
+  if (!elem || !elem.getContext) {
+    return;
+  }
+
+  // Get the canvas 2d context.
+  var context = elem.getContext('2d');
+  if (!context) {
+    return;
+  }
+
+  // Let's draw a blue rectangle with a red shadow.
+  // Shadows only render in Firefox 3.1 nightly builds and in Konqueror 4.1.
+  context.shadowOffsetX = 5;
+  context.shadowOffsetY = 5;
+  context.shadowBlur    = 4;
+  context.shadowColor   = 'rgba(255, 0, 0, 0.5)';
+  context.fillStyle     = '#00f';
+  context.fillRect(20, 20, 150, 100);
+}, false);
+    // --></script>
+  </head>
+  <body>
+    <p><canvas id="myCanvas" width="300" height="150">Your browser does not have 
+    support for Canvas.  This should render as: <img src="example-shadows.jpg"
+    alt="Example rendering of a blue rectangle with a red shadow."></canvas></p>
+  </body>
+</html>
+

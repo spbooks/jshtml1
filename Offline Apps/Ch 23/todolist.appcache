@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+# This is a comment
+# revision 1
+
+CACHE:
+js/todolist.js
+js/appcache.js
+css/style.css
+imgs/checkOk.svg

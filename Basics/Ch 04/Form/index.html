@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Contact Big Fat Agency</title>
+	<link rel="stylesheet" type="text/css" href="s.css">
+</head>
+<body>
+
+<div id="wrapper">
+<header>
+	<h1>HTML5 <i>News-Press</i></h1>
+	<h2>All the news that's fit to link</h2>
+	<nav>
+		<ul>
+			<li><a href="#">World</a></li>
+			<li><a href="#">National</a></li>
+			<li><a href="#">Metro area</a></li>
+			<li><a href="#">Sports</a></li>
+			<li><a href="#">Arts &amp; Entertainment</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+<h1>Have a story idea?</h1>
+
+<p>Is there an event or incident that you we think we should cover? Let us know. A <b class="required">&#9733;</b> indicates a required field.</p>
+
+<form action="./script/" method="POST">
+<p>
+	<label for="name">Your name:</label>
+    <input type="text" name="name" id="name" required>
+</p>
+
+<p>
+    <label for="city">City of residence:</label>
+    <input type="text" name="city" id="city">
+</p>
+
+<p>
+	<label for="email">E-mail address (separate multiple e-mail addresses with a comma):</label>
+	<input type="email" name="email" id="email" placeholder="jane.doe@example.com" multiple required>
+</p>   
+
+<p>
+	<label for="tel">Telephone number:</label>
+	<input type="tel" name="phone_number" if="phone_number" placeholder="(000) 000-0000" pattern="\([2-9][0-9]{2}\) [0-9]{3}-[0-9]{4}">
+</p>   
+
+<p>
+    <label for="website">Please provide a web site where we can learn more (if applicable):</label>
+        <input type="url" name="website" id="current_site" placeholder="http://www.yourdomain.com" pattern="http(|s)://[-0-9a-z]{1,253}\.[.a-z]{2,7}">
+    </p>    
+    
+<p>
+	<label for="project">Tell us your story idea:</label>
+   <textarea name="story_idea" id="story_idea" rows="10" required placeholder="Briefly tell us what we should write about and why." maxlength="2000"></textarea>
+</p>
+      
+<p>
+	<button type="submit">Send it!</button>
+</p>
+</form>
+</main>
+
+ <footer>
+   <ul>
+	<li><a href="#">Contact Us</a></li>
+	<li><a href=#">Terms of Use</a></li>
+	<li><a href=#">Privacy Policy</a></li>
+   </ul>
+   <p>No copyright 2013 HTML5 News-Press.</p>
+</footer>
+    
+</div>
+
+</body>
+</html>

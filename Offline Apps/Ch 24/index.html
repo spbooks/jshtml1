@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>localStorage to do list</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>JumpStart HTML5: Offline Applications - Web Storage (<code>localStorage</code>) demo</h1>
+        <nav><a href="../">Back to Chapter Listing</a></nav>
+    </header>
+    
+	<section id="application">
+        <form id="addnew">
+            <p>
+                <label for="newitem">What do you need to do today?</label>
+                <input type="text" id="newitem" required autofocus>
+                <button type="submit" id="saveitem">Add</button>
+            </p>
+            <p>
+            <button type="button" id="deletedone">Delete completed</button>
+            <button type="button" id="deleteall">Delete all</button></p>
+        </form>
+        <ul id="list"></ul> 
+    </section>
+	<script type="text/javascript" src="js/addEventListenerPolyfill.js"></script>    
+	<script type="text/javascript" src="js/todolist.js"></script>
+</body>
+</html>

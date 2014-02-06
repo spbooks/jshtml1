@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Parent Document</title>
+</head>
+  <body>
+    <iframe src="child.html" height="500" width="500" id="iframe">
+    </iframe>
+    <br/>
+    <button id="reloadbtn">Reload</button>
+
+    <script>
+      document.getElementById("reloadbtn").addEventListener("click", reload, false);
+
+      // reload handler
+      function reload(e) {
+        // is cross-messaging supported?
+        if (window.postMessage) {
+            document.getElementById('iframe').contentWindow.postMessage(
+              Math.random()*1000, 'http://localhost'
+            );
+        }
+        else {
+            console.log('postMessage() not supported');
+        }
+      }
+    </script>
+
+  </body>
+</html>

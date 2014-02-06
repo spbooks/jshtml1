@@ -1,0 +1,246 @@
+/* Using FontAwesome icons for our buttons */
+@import url(font-awesome/css/font-awesome.min.css);
+
+[id=video_wrapper]{
+    width: 508px;
+    margin: 1em auto;
+    position:relative;
+    font: normal 10px / 1 'Helvetica Neue','Liberation Sans',helvetica,arial,sans-serif;
+    background:#333;
+    color:#999;
+}
+
+[id=video_wrapper] video{
+    width:inherit;
+    min-height:290px;
+    position:relative;
+    z-index:1;
+    display:block;
+    height:auto;
+}
+
+
+[id=playback]{
+    width: 81%;
+    vertical-align: -0.2em;
+    background: #ccc;
+    height:12px;
+    display:inline-block;
+    border:none;
+}
+
+[id=duration]::before{
+    content: ' / ';
+}
+
+[id=elapsed], [id=duration]{
+    display:inline-block;
+    text-align:right;
+    padding-top:2px
+}
+
+[id=video_time]{
+    width: 100%;
+    position:absolute;
+    top:290px;
+}
+
+[id=video_seek]{
+    position:absolute;
+    z-index:3;
+    width: 81%;
+    left:0px;
+    top:289px;
+    
+}
+
+[id=seek]{
+    -webkit-appearance:none;
+       -moz-appearance:none;
+        -ms-appearance:none;
+            appearance:none;
+    width: 100%;
+    position:absolute;
+    left:0;
+    outline:none;
+    padding:2px 0; /* For Internet Explorer's sake */
+    height:10px;
+    background-color:transparent;
+}
+
+[id=play], [id=pause], label[for=volume]{
+    font-family:'FontAwesome';
+    font-size:2em;
+}
+
+label[for=volume]{
+    font-size:2.8em;
+    display:inline-block;
+    vertical-align:baseline
+}
+
+
+[id=video_wrapper] button{
+    text-align:center; 
+    width: 42px;
+    height: 41px;
+    background:#333;
+    border: 0;
+    padding:0;
+    color:#999;
+}
+
+[id=video_wrapper] button:hover{
+    outline: none;
+    color:#c09;
+}
+[id=video_wrapper] button:focus{
+    outline:none;   
+}
+
+[id=video_controls]{
+    border-top:20px solid #333;   
+}
+
+[id=volume]{
+    width: 100px;
+    margin-top:-13px;
+}
+
+[id=video_controls] span label{
+    display:inline-block;
+    margin-top: -15px;
+}
+
+/*=============================================================
+In this section we are using experimental, browser-specific
+properties. Because they're experimental, behavior may change.
+To date, however, they're the only way to create custom controls.
+=============================================================*/
+
+[type="range"] {
+    -webkit-appearance: none;
+    vertical-align:middle;
+}
+
+/* Webkit-only progress bar styles. */
+[id=playback]::-webkit-progress-bar{
+    background-color: #222;
+}
+
+[id=playback]::-webkit-progress-value{
+    background-color: #c09;
+}
+
+[id=seek]::-webkit-slider-thumb,
+[id=volume]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #cf0;
+    margin-top: -4px;
+}
+
+[id=volume]::-webkit-slider-thumb{
+    margin-top:-4px;
+    width:10px;
+    height:10px
+}
+
+[id=volume]::-webkit-slider-runnable-track{
+    background:#666;
+    height:2px;
+    margin-top:0px;
+}
+
+
+
+/* Firefox-only progress bar styles */
+progress[id=playback]{
+    -moz-border-top-colors: rgba(0,0,0,0);
+    -moz-border-right-colors: rgba(0,0,0,0);
+    -moz-border-bottom-colors: rgba(0,0,0,0);
+    -moz-border-left-colors: rgba(0,0,0,0);
+    background:#222
+}
+
+
+/* Firefox-only range bar styles */
+
+::-moz-range-track{
+    border-top: none;
+    border-bottom: none;
+    border:0;
+}
+
+[id=seek]::-moz-range-track{
+    background: transparent;
+}
+
+[id=volume]::-moz-range-track{
+    background: #666;
+}
+
+::-moz-range-thumb {
+    -moz-appearance: none !important;
+    border: 0;
+    border-radius: 100%;
+    background-image:none;
+    background-color: #cf0;
+}
+
+[id=seek]::-moz-range-thumb {
+    padding:4px;
+}
+    
+::-moz-progress-bar{
+    background:#c09;
+}
+
+/* Microsoft-only range bar styles */
+::-ms-thumb{
+    background-image:none;
+    background-color: #cf0;
+    padding: 2px 0;
+    vertical-align:bottom
+}
+
+
+[id=volume]::-ms-track{
+    background-color: #666;
+    height:10px;
+    margin:17px 0 0 5px;
+    height:3px;
+    border:1px solid #222;
+}
+
+[id=playback]::-ms-fill{
+    background:#c09   
+}
+
+[id=playback]::-ms-ticks-after{color:transparent}
+
+[id=seek]::-ms-track,
+[id=seek]::-ms-fill-lower, 
+[id=seek]::-ms-fill-upper,
+[id=volume]::-ms-fill-upper,
+::-ms-ticks-after,
+::-ms-ticks-before,
+[id=volume]::-ms-ticks-after,
+[id=volume]::-ms-ticks-before{
+    background: transparent;
+    border:0;
+    color:transparent;
+}
+
+[id=seek]::-ms-thumb{
+    border-color: #cf0;
+    border-width: 2px;
+    border-style:solid;
+    margin-top:-5px;
+    padding-bottom:10px
+}
+[id=volume]::-ms-fill-lower{
+    background: transparent;
+}

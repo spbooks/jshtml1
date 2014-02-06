@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Primer - Example: Using gradients</title>
+    <script type="text/javascript"><!--
+window.addEventListener('load', function () {
+  // Get the canvas element.
+  var elem = document.getElementById('myCanvas');
+  if (!elem || !elem.getContext) {
+    return;
+  }
+
+  // Get the canvas 2d context.
+  var context = elem.getContext('2d');
+  if (!context) {
+    return;
+  }
+
+  // The hue spectrum used by HSV color picker charts.
+  var hue = [
+    [255,   0,   0 ], // 0, Red,       0°
+    [255, 255,   0 ], // 1, Yellow,   60°
+    [  0, 255,   0 ], // 2, Green,   120°
+    [  0, 255, 255 ], // 3, Cyan,    180°
+    [  0,   0, 255 ], // 4, Blue,    240°
+    [255,   0, 255 ], // 5, Magenta, 300°
+    [255,   0,   0]], // 6, Red,     360°
+
+    // Create the linear gradient: sx, sy, dx, dy.
+    // That's the start (x,y) coordinates, followed by the destination (x,y).
+    gradient = context.createLinearGradient(0, 0, elem.width, 0);
+
+  // Add the color stops.
+  for (var i = 0; i <= 6; i++) {
+    color = 'rgb(' + hue[i][0] + ', ' + hue[i][1] + ', ' + hue[i][2] + ')';
+    gradient.addColorStop(i * 1/6, color);
+  }
+
+  // Use the gradient for the fillStyle.
+  context.fillStyle     = gradient;
+
+  // Now let's draw a rectangle with a black shadow.
+  // Shadows only render in Konqueror 4.1 and Firefox 3.1 nightlies.
+  context.shadowOffsetX = 5;
+  context.shadowOffsetY = 5;
+  context.shadowBlur    = 4;
+  context.shadowColor   = 'rgba(0, 0, 0, 0.5)';
+  context.fillRect(5, 5, 200, 100);
+
+  // For effect, let's also draw some text: "Hello world!".
+  context.font          = 'bold 36px sans-serif';
+  context.textBaseline  = 'top';
+
+  // Drawing text is only supported by Firefox 3.1 nightlies and recent WebKit builds.
+  // Due to some bug, text+gradients don't render fine in Webkit.
+
+  if (context.fillText) {
+    context.fillText  ('Hello world!', 5, 120, 200);
+  }
+
+  // strokeText is unsupported by Webkit.
+  context.strokeStyle = '#666';
+  if (context.strokeText) {
+    context.strokeText('Hello world!', 5, 120, 200);
+  }
+}, false);
+    // --></script>
+  </head>
+  <body>
+    <p><canvas id="myCanvas" width="220" height="180">Your browser does not have 
+    support for Canvas. This render as: <img src="example-gradients.jpg" 
+    alt="Example render."></canvas></p>
+  </body>
+</html>
+

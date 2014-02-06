@@ -1,0 +1,27 @@
+     <!DOCTYPE html>
+    <html>
+      <head>
+    <title>HTML5 SVG Exercise 3</title>
+      </head>
+     
+      <body>
+    <h1>HTML5 SVG Exercise 3</h1>
+     
+    <b>A patterned circle:</b>
+    <br><br>
+       <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="mypattern" patternUnits="userSpaceOnUse"
+        x="0" y="0" width="150" height="100">
+      <circle cx="50" cy="50" r="10" fill="red" stroke="black"
+        />
+      <rect x="100" y="0" width="50" height="50" fill="cyan"   
+        stroke="red" />
+    </pattern>
+  </defs>
+  <ellipse fill="url(#mypattern)" stroke="black"
+     stroke-width="1" cx="200" cy="200" rx="200" ry="200" />
+    </svg>
+     
+     </body>
+    </html>

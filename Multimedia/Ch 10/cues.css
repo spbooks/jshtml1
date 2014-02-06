@@ -1,0 +1,28 @@
+body{
+    background: #036;
+    color:#fff;
+    font-family:sans-serif;
+    padding: 1em
+}
+
+a{
+    color:#ff9;        
+}
+/*  
+    So far, only Chrome, Safari 6.1/Safari for iOS7, 
+    and Opera 16+ support this. 
+*/
+::cue{
+    font:18px / 1.5 verdana;
+}
+::cue(v[voice=Man1]){
+    color:#9f0;
+}
+
+::cue(v[voice=Man2]){
+    color:#ff9;
+}
+
+::cue(v[voice=Woman]){
+    color:#ece;
+}

@@ -1,0 +1,65 @@
+/*
+ * vim:set fo=wan1croql tw=80 ts=2 sw=2 sts=2 sta et ai cin fenc=utf-8 ff=unix:
+ *
+ * © 2008 ROBO Design
+ * http://www.robodesign.ro
+ *
+ * $Date: 2008-11-27 18:31:03 +0200 $
+ */
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #000;
+  background: #FFF;
+}
+
+p, li { text-align: justify; }
+
+pre {
+  padding: 5px;
+  max-height: 20em;
+  overflow: auto;
+  border: 2px dotted #999;
+  margin-bottom: 0;
+}
+
+code { font-weight: bold; }
+pre code { font-weight: normal !important; }
+
+/* var { color: #5555FF; } */
+
+img {
+  border: 2px solid #999;
+  padding: 4px;
+}
+
+.example_image {
+  float: right;
+  margin: 0 0 0 10px;
+}
+
+.example_link {
+  margin: 0;
+}
+
+/* Syntax highlighting from dev.opera.com */
+.mtag { font-weight: bold; }
+.mattr, .cprop { color: #008000; }
+.mvalue, .cval { color: #aa0000; }
+.comment { font-style: italic; color: #808080; }
+var, .svar { color: #cc6000; font-weight: bold; }
+.skeyw { color: #00f; }
+.sstring { color: #aa0000; }
+.sfunc { color: #996699; }
+.snum { color: #aa0000; font-weight: bold; }
+.cselc { color: #800080; font-weight: bold; }
+
+/* Syntax highlighting from vim. */
+.Special { color: #6a5acd; }
+.Comment { color: #0000ff; }
+.Constant { color: #ff00ff; }
+.Type { color: #2e8b57; font-weight: bold; }
+.Identifier { color: #008b8b; }
+.Statement { color: #a52a2a; font-weight: bold; }
+

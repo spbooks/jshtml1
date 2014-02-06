@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Random Jokes Website</title>
+<script>
+if(typeof(EventSource)!=="undefined"){
+  var eventsource=new EventSource('source.php');
+  eventsource.addEventListener('message', function(event) {
+    document.getElementById("container").innerHTML = JSON.parse(event.data).value.joke + '<br/>' + document.getElementById("container").innerHTML;
+  },false);
+}
+else console.log("No EventSource");
+</script>
+</head>
+<body>
+
+  <div id="container"></div>
+  
+</body>
+</html>

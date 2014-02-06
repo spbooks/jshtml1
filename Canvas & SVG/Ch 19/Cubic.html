@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+    <body>
+<svg viewBox = "0 0 1100 400" version = "1.1">
+    <!-- The cubic Bézier curve -->
+    <path id = "cubiccurveABBC" d = "M 100 350 c 150 -300 150 -300 300 0" stroke = "red" stroke-width = "5" fill = "none"/>
+    <path id = "cubiccurveABBC" d = "M 450 350 c 200 -300 100 -300 300 0" stroke = "red" stroke-width = "5" fill = "none"/>
+    <path id = "cubiccurveABBC" d = "M 800 350 c 100 -300 200 -300 300 0" stroke = "red" stroke-width = "5" fill = "none"/>
+    <!-- Annotation -->
+    <!-- Mark the control points -->
+    <g stroke = "blue" stroke-width = "3" fill = "blue">
+        <!-- left curve has identical control points -->
+        <circle cx = "250" cy = "50" r = "3"/>
+        <!-- middle curve control points -->
+        <circle cx = "650" cy = "50" r = "3"/>
+        <circle cx = "550" cy = "50" r = "3"/>
+        <!-- right curve control points -->
+        <circle cx = "900" cy = "50" r = "3"/>
+        <circle cx = "1000" cy = "50" r = "3"/>
+    </g>
+    <!-- Label the points -->
+    <g font-size = "30" font = "sans-serif" fill = "red" stroke = "none" text-anchor = "middle">
+        <text x = "250" y = "50" dy = "-10">
+            Both control points
+        </text>
+        <text x = "650" y = "50" dy = "-10">
+            CP1
+        </text>
+        <text x = "550" y = "50" dy = "-10">
+            CP2
+        </text>
+        <text x = "900" y = "50" dy = "-10">
+            CP2
+        </text>
+        <text x = "1000" y = "50" dy = "-10">
+            CP1
+        </text>
+    </g>
+</svg>
+</body>
+</html>

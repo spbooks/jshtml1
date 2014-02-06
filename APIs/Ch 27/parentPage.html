@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+  The following script won't be parsed by the JavaScript engine 
+  because of its type
+-->
+<script type="text/javascript-worker" id="jsworker">
+
+  setInterval(function(){
+    postMessage(getTime());
+  }, 1000);
+  
+  function getTime(){
+    var d = new Date();
+    return d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+  }
+
+</script>
+
+<script>
+  var blobURI = new Blob(
+    [document.querySelector("#jsworker").textContent]
+  );
+
+  var worker=new Worker(window.URL.createObjectURL(blobURI));
+
+  worker.addEventListener('message',function(e){
+    document.getElementById('currTime').textContent=e.data;
+  },false);
+
+  worker.postMessage();
+</script>
+</head>
+<body>
+<div id="currTime"></div>
+</body>
+</html>

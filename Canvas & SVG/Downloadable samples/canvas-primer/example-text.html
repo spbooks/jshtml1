@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Primer - Example: Drawing text</title>
+    <script type="text/javascript"><!--
+window.addEventListener('load', function () {
+  // Get the canvas element.
+  var elem = document.getElementById('myCanvas');
+  if (!elem || !elem.getContext) {
+    return;
+  }
+
+  // Get the canvas 2d context.
+  var context = elem.getContext('2d');
+  if (!context) {
+    return;
+  }
+
+  // Let's draw "Hello world!" in blue.
+  context.fillStyle    = '#00f';
+
+  // The font property is like the CSS font property.
+  context.font         = 'italic 30px sans-serif';
+  context.textBaseline = 'top';
+
+  if (context.fillText) {
+    context.fillText('Hello world!', 0, 0);
+  }
+
+  // It looks like WebKit doesn't support the strokeText method.
+  // Tested on Ubuntu 8.10 Linux in WebKitGTK revision 38095 (2008-11-04, svn 
+  // trunk build).
+  context.font = 'bold 30px sans-serif';
+  if (context.strokeText) {
+    context.strokeText('Hello world!', 0, 50);
+  }
+}, false);
+    // --></script>
+  </head>
+  <body>
+    <p><canvas id="myCanvas" width="300" height="150">Your browser does not have 
+    support for Canvas.  This should render as: <img src="example-text.jpg" 
+    alt="Example text render."></canvas></p>
+  </body>
+</html>

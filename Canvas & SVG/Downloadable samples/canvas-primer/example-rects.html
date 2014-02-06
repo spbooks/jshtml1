@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Primer - Example: The basics (rectangles)</title>
+    <script type="text/javascript"><!--
+window.addEventListener('load', function () {
+  // Get the canvas element.
+  var elem = document.getElementById('myCanvas');
+  if (!elem || !elem.getContext) {
+    return;
+  }
+
+  // Get the canvas 2d context.
+  var context = elem.getContext('2d');
+  if (!context) {
+    return;
+  }
+
+  context.fillStyle   = '#00f'; // blue
+  context.strokeStyle = '#f00'; // red
+  context.lineWidth   = 4;
+
+  // Draw some rectangles.
+  // Arguments: x, y, width, height
+  context.fillRect  (0,   0, 150, 50);
+  context.strokeRect(0,  60, 150, 50);
+  context.clearRect (30, 25,  90, 60);
+  context.strokeRect(30, 25,  90, 60);
+}, false);
+    // --></script>
+  </head>
+  <body>
+    <p><canvas id="myCanvas" width="300" height="150">Your browser does not have 
+    support for Canvas. You should see: <img src="example-rects.jpg"
+    alt="Example rendering of several squares."></canvas></p>
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A page that provides random image</title>
+</head>
+<body>
+
+  <div id="container">
+    <img src="http://randomimage.setgetgo.com/get.php?key=2323232" id="image"
+    />
+  <div>
+
+  <script>
+    window.addEventListener('message', messageReceiver, false);
+
+    function messageReceiver(event) {
+
+      // can the origin can be trusted?
+      if (event.origin != 'http://localhost') return;
+
+      document.getElementById('image').src ="http://randomimage.setgetgo.com/get.php?key=" + event.data;
+
+      console.log(
+        'source=' + event.source +
+        ', data=' + event.data +
+        ', origin=' + event.origin
+      );
+
+    }
+  </script>
+
+</body>
+</html>
